@@ -1,0 +1,165 @@
+@import "icomoon";
+
+$bg-color: #efefef;
+$text-color: #4f4f4f;
+$second-text-color: #D9DADA;
+$highlight-text-color: white;
+$button-color: #6cdcac;
+$border-color:#DEDDDB;
+body{
+  text-align: center;
+  font-size: 62.5%;
+  font-family: "Open Sans","sans-serif";
+}
+//头部分
+.hero{
+  margin: 0 auto;
+  background: url(images/headHero.jpg);
+  //cover: 将背景图等比扩展足够大，使其能覆盖背景区域，也许图片的某些部分无法显示在背景区域
+  background-size: cover;
+  color: $highlight-text-color;
+  img{
+    width: 8em;
+    height: 2em;
+    float: left;
+  }
+  ul{
+    float: right;
+    list-style: none;
+    li{
+      float: left;
+      margin: 1em 0.5em;
+      padding: 0.5em 1em;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      //&表示父类选择器
+      &:last-child{
+        border: 1px solid $highlight-text-color;
+      }
+    }
+
+  }
+
+  header{
+    overflow: hidden;
+  }
+  h1{
+    font-size: 4em;
+    padding: 1em 0 0.5em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  form{
+    padding: 2em 0 4em;
+    input[type="text"]{
+      padding: 1em;
+      border: 0;
+      width: 18em;
+      border-radius: 2px 0 0 2px;
+      opacity: 0.6;
+      background: $bg-color;
+
+    }
+    input[type="button"]{
+      width: 6em;
+      border: 0;
+      padding: 1em;
+      border-radius: 0 2px 2px 0;
+      color: $highlight-text-color;
+    }
+  }
+
+}
+
+//数字部分
+.numbers{
+  width: 80%;
+  margin: 0 auto;
+
+  ul{
+    overflow: hidden;//清除浮动带来的影响
+    //相对自身定位即向上移动移动2em
+    position: relative;
+    top: -2em;
+    list-style-type: none;
+    li{
+      float: left;
+      width: 25%;
+      background: $bg-color;
+      box-sizing: border-box;
+      border-top: 1px solid $second-text-color;
+      border-bottom: 1px solid $second-text-color;
+      border-left: 1px solid $second-text-color;
+      &:last-child{
+        border-right: 1px solid $second-text-color;
+      }
+    }
+  }
+}
+
+.howItWork{
+  margin: 0 auto;
+  li{
+    float: left;
+    width: 33.33%;
+    list-style-type: none;
+    position: relative;
+    &:before{
+      display: block;
+      content: "";
+      background: $border-color;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      margin: 0 1.8em;
+    }
+    &:last-child:before{
+      display: none;
+    }
+  }
+  .number{
+    display: block;
+    width: 1em;
+    height: 1em;
+    color: $border-color;
+    font-size: 2em;
+    border: 1px solid $border-color;
+    line-height: 1em;
+    margin: 1em auto 2em;
+    padding: 0.4em;
+    border-radius: 50%;
+    background-color: $bg-color;
+  }
+
+  i{
+    font-size: 3.6em;
+  }
+  .icon-list{
+    color: #ECA95A;
+  }
+  .icon-pencil{
+    color: #AC9CD2;
+  }
+  .icon-users{
+    color: #4D99CB;
+  }
+  h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 1em 0;
+    &:after{
+      display: block;
+      content: "";
+      background-color: $border-color;
+      width: 2em;
+      height: 0.1em;
+      margin: 0.4em auto;
+    }
+  }
+  p{
+    height: 6em;
+  }
+}
